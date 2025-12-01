@@ -4,6 +4,8 @@
     "module": "commonjs",
     "strict": true,
     "rootDir": "src",
-    "outDir": "dist"
-  }
+    "outDir": "dist",
+    "lib": ["ES2016", "DOM"]
+  },
+  "include": ["src"]
 }
