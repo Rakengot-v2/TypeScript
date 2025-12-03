@@ -1,12 +1,16 @@
 {
-  "name": "typescript-practice",
+  "name": "typescript",
   "version": "1.0.0",
-  "description": "Навчальний репозиторій з TypeScript",
-  "main": "dist/index.js",
+  "description": "TS",
+  "main": "main.js",
   "scripts": {
     "build": "tsc"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
   "devDependencies": {
-    "typescript": "^5.6.3"
+    "typescript": "^5.9.3"
   }
 }

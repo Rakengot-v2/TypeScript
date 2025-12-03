@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Практична №2 — TS інтерактивність v3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header class="header">
+    <div class="container header-row">
+        <div class="logo">UniTS</div>
+        <nav class="nav">
+            <a href="#features">Можливості</a>
+            <a href="#posts">Пости</a>
+        </nav>
+        <button class="btn btn-primary" data-open-feedback>Зворотній зв'язок</button>
+    </div>
+    <div class="scroll-bar" id="scrollBar"></div>
+</header>
+
+<main>
+    <section class="hero" id="hero">
+        <div class="container hero-inner">
+            <h1>TypeScript-сторінка з інтерактивністю</h1>
+            <p>Модальне вікно, прогрес прокрутки, завантаження постів з API та анімації.</p>
+            <button class="btn btn-outline" data-open-feedback>Написати нам</button>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Що тут реалізовано</h2>
+            <div class="features-grid">
+                <article class="feature-card js-observe">
+                    <h3>Модальне вікно</h3>
+                    <p>Відкривається по кліку на кнопки, закривається по хрестику або кліку на фон.</p>
+                </article>
+                <article class="feature-card js-observe">
+                    <h3>Прогрес прокрутки</h3>
+                    <p>У верхній частині показується смуга, яка відображає, скільки сторінки переглянуто.</p>
+                </article>
+                <article class="feature-card js-observe">
+                    <h3>Пости з API</h3>
+                    <p>Список постів з JSONPlaceholder, з кнопкою для дозавантаження нових.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="posts" id="posts">
+        <div class="container">
+            <h2>Останні пости</h2>
+            <div id="postsContainer" class="posts-grid">
+                <!-- Посты вставляются через TS -->
+            </div>
+            <button id="loadMore" class="btn btn-primary">Завантажити ще</button>
+        </div>
+    </section>
+</main>
+
+<!-- Модальне вікно -->
+<div id="backdrop" class="backdrop"></div>
+
+<div id="feedbackModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" data-close-feedback>&times;</button>
+        <h3>Форма зворотного зв'язку</h3>
+        <p>Ця форма демонстраційна. Дані нікуди не надсилаються.</p>
+        <label class="field">
+            <span>Ім'я</span>
+            <input type="text" />
+        </label>
+        <label class="field">
+            <span>Повідомлення</span>
+            <textarea rows="3"></textarea>
+        </label>
+        <button class="btn btn-primary" data-close-feedback>Закрити</button>
+    </div>
+</div>
+
+<script type="module" src="./dist/main.js"></script>
+</body>
+</html>
